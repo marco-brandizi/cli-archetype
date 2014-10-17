@@ -25,10 +25,6 @@ OPTS="$OPTS -Dfile.encoding=UTF-8"
 #OPTS="$OPTS -Xdebug -Xnoagent"
 #OPTS="$OPTS -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5005"
 
-# The Database driver. You need to set this to your driver, in case you don't use one of the provided ones
-# 
-#JDBCPATH=/path/to/jdbc_driver.jar
-
 # You shouldn't need to change the rest
 #
 ###
@@ -36,8 +32,8 @@ OPTS="$OPTS -Dfile.encoding=UTF-8"
 cd "$(dirname $0)"
 MYDIR="$(pwd)"
 
-# This includes the core and the db module, plus the HSQL JDBC driver. If you want to use other databases or 
-# other myEquivalents managers, you need to download the .jar files you need and set up the classpath here
+# This includes the core and the db module, plus the H2 JDBC driver. If you want to use other databases 
+# you need to download the .jar files you need and set up the classpath here
 # (see http://kevinboone.net/classpath.html for details)  
 export CLASSPATH="$CLASSPATH:$MYDIR:$MYDIR/lib/*"
 
@@ -49,5 +45,5 @@ java \
 
 EXCODE=$?
 
-echo Java Finished. Quitting the Shell Too. >&2
+echo Java Finished. Quitting the Shell Too.
 exit $EXCODE
