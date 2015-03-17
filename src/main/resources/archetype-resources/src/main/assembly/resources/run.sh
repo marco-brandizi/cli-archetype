@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# This is the entry point that invokes the MyEquivalents's line commands.
+# This is the Bash Launcher.
 # 
 
 # This is only used at the EBI. TODO: generalise
