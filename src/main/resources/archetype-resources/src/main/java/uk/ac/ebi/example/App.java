@@ -34,6 +34,7 @@ public class App
 	{
 		try
 		{
+			exitCode = 0;
 			CommandLineParser clparser = new GnuParser ();
 			CommandLine cli = clparser.parse ( getOptions(), args );
 			
@@ -44,6 +45,11 @@ public class App
 			}
 			
 			out.println ( "Hello World! These are the arguments you sent me:" );
+			for ( String arg: args ) out.print ( arg + "\t" );
+			out.println ();
+
+			out.println ( "And you're left with these after having eaten options:" );
+			args = cli.getArgs ();
 			for ( String arg: args ) out.print ( arg + "\t" );
 			out.println ();
 			
