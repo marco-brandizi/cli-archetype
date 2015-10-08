@@ -12,9 +12,34 @@
   	Allows you to define a project that produces the binary for a command-line based application, using the 
   	Assembly plug-in.
   	
-  	Use this command to generate your project from this archetype:
+  	Use this command to generate your project from this archetype (doesn't require any pre-download):
   	
-		mvn archetype:generate -DgroupId=org.test.group -DartifactId=test-cli -DarchetypeGroupId=uk.ac.ebi.maven -DarchetypeArtifactId=cli-archetype -DarchetypeVersion=1.0-SNAPSHOT  	
+		mvn archetype:generate \
+		  -DgroupId=org.test.group \
+		  -DartifactId=test-cli \
+		  -DarchetypeGroupId=uk.ac.ebi.maven \
+		  -DarchetypeArtifactId=cli-archetype \
+		  -DarchetypeVersion=1.0-SNAPSHOT \
+		  -DarchetypeRepository=https://raw.githubusercontent.com/EBIBioSamples/EBIBioSamples.github.io/maven-repo
   </description>
   
+	<parent>
+	  <groupId>uk.ac.ebi.fg.biosd</groupId>
+	  <artifactId>biosd_deploy</artifactId>
+	  <version>1.0-SNAPSHOT</version>
+	</parent>
+  
+  
+	<repositories>
+
+		<repository>
+	    <id>EBIBioSamples-GH-repo</id>
+	    <url>https://raw.githubusercontent.com/EBIBioSamples/EBIBioSamples.github.io/maven-repo</url>
+	    <snapshots>
+        <enabled>true</enabled>
+	    </snapshots>
+    </repository>
+	
+	</repositories>  
+
 </project>
