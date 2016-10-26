@@ -1,6 +1,9 @@
 <!-- 
   File for the Maven Assembly plug-in.
- 	Takes the dependency file (prepared by deps.xml) and adds a few other files to the final distribution package. 
+ 	
+ 	This produces a binary that contains all the dependencies needed to run this command line tool (in lib/), 
+ 	plus everything that lies on src/main/assembly/resources/ (putting the contents of this folder on the top
+ 	of the final binary file). 	
  -->
 <assembly>
   <id>pkg</id>

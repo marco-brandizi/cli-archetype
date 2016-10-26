@@ -1,12 +1,10 @@
 package uk.ac.ebi.example;
 
-import static junit.framework.Assert.assertEquals;
-import static junit.framework.Assert.assertTrue;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
-
-import junit.framework.Assert;
 
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -42,7 +40,7 @@ public class AppTest
 		System.setOut ( outBkp ); // restore the original output
 		
 		log.debug ( "CLI output:\n{}", outBuf.toString () );
-		Assert.assertTrue ( "Can't find CLI output!", outBuf.toString ().contains ( "a\tb\tc" ) );
+		assertTrue ( "Can't find CLI output!", outBuf.toString ().contains ( "a\tb\tc" ) );
 		assertEquals ( "Bad exit code!", 0, App.getExitCode () );
 	}
 

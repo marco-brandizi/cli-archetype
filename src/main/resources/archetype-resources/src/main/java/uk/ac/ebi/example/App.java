@@ -6,9 +6,9 @@ import java.io.PrintWriter;
 
 import org.apache.commons.cli.CommandLine;
 import org.apache.commons.cli.CommandLineParser;
-import org.apache.commons.cli.GnuParser;
+import org.apache.commons.cli.DefaultParser;
 import org.apache.commons.cli.HelpFormatter;
-import org.apache.commons.cli.OptionBuilder;
+import org.apache.commons.cli.Option;
 import org.apache.commons.cli.Options;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -35,7 +35,7 @@ public class App
 		try
 		{
 			exitCode = 0;
-			CommandLineParser clparser = new GnuParser ();
+			CommandLineParser clparser = new DefaultParser ();
 			CommandLine cli = clparser.parse ( getOptions(), args );
 			
 			if ( cli.hasOption ( "help" ) ) 
@@ -67,15 +67,14 @@ public class App
 		}
 	}
 	
-	@SuppressWarnings ( "static-access" )
 	private static Options getOptions ()
 	{
 		Options opts = new Options ();
 
-		opts.addOption ( OptionBuilder
-			.withDescription ( "Prints out this message" )
-			.withLongOpt ( "help" )
-			.create ( 'h' )
+		opts.addOption ( Option.builder ( "h" )
+			.desc ( "Prints out this message" )
+			.longOpt ( "help" )
+			.build ()
 		);
 		
 		return opts;		
@@ -105,8 +104,7 @@ public class App
 	 * This can be used when {@link #NO_EXIT_PROP} is "true" and you're invoking {@link #main(String...)} from 
 	 * a JUnit test. It tells you the OS exit code that the JVM would return upon exit.
 	 */
-	public static int getExitCode ()
-	{
+	public static int getExitCode () {
 		return exitCode;
 	}
 

@@ -10,7 +10,7 @@
 #fi
 
 # These are passed to the JVM. they're appended, so that you can predefine it from the shell
-OPTS="$OPTS -Xms2G -Xmx4G -XX:PermSize=128m -XX:MaxPermSize=256m"
+OPTS="$OPTS -Xms2G -Xmx4G"
 
 # We always work with universal text encoding.
 OPTS="$OPTS -Dfile.encoding=UTF-8"
@@ -37,7 +37,7 @@ MYDIR="$(pwd)"
 # (see http://kevinboone.net/classpath.html for details)  
 export CLASSPATH="$CLASSPATH:$MYDIR:$MYDIR/lib/*"
 
-# See here for an explaination about ${1+"$@"} :
+# See here for an explanation about ${1+"$@"} :
 # http://stackoverflow.com/questions/743454/space-in-java-command-line-arguments 
 
 java \
@@ -46,4 +46,5 @@ java \
 EXCODE=$?
 
 echo Java Finished. Quitting the Shell Too.
+echo
 exit $EXCODE
