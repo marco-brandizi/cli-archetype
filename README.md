@@ -4,5 +4,5 @@ Assembly plug-in.
 Use this command to generate your project from this archetype:
 
 ```bash
-		mvn archetype:generate -DgroupId=org.test.group -DartifactId=test-cli -DarchetypeGroupId=uk.ac.ebi.maven -DarchetypeArtifactId=cli-archetype -DarchetypeVersion=1.0-SNAPSHOT -Dmaven.repo.remote=https://raw.githubusercontent.com/EBIBioSamples/EBIBioSamples.github.io/maven-repo 	
+		mvn archetype:generate -DgroupId=org.test.group -DartifactId=test-cli -DarchetypeGroupId=uk.ac.ebi.maven -DarchetypeArtifactId=cli-archetype -DarchetypeVersion=SEE-THE-POM -Dmaven.repo.remote=https://raw.githubusercontent.com/EBIBioSamples/EBIBioSamples.github.io/maven-repo 	
 ```

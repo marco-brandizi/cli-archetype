@@ -7,7 +7,7 @@
   <fileSets>
 
     <fileSet filtered="true" encoding="utf-8" >
-      <directory>src</directory>
+      <directory></directory>
       <excludes>
 	      <exclude>**/*.sh</exclude>
       </excludes>
@@ -17,7 +17,7 @@
     </fileSet>
 
     <fileSet filtered="false" encoding="utf-8" >
-      <directory>src</directory>
+      <directory></directory>
       <includes>
 	      <include>**/*.sh</include>
       </includes>
