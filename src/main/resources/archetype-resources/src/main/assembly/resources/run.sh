@@ -15,7 +15,7 @@ OPTS="$OPTS -Xms2G -Xmx4G"
 # We always work with universal text encoding.
 OPTS="$OPTS -Dfile.encoding=UTF-8"
 
-# Monitoring with jconsole (end-user doesn't usually need this)
+# Monitoring with jvisualvm/jconsole (end-user doesn't usually need this)
 #OPTS="$OPTS 
 # -Dcom.sun.management.jmxremote.port=5010
 # -Dcom.sun.management.jmxremote.authenticate=false
