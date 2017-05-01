@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Deploys the command line binary. This doesn't do much, but it's needed with Bamboo.
+# Deploys the command line binary. This doesn't do much, but it might be useful with CI systems.
 # 
 
 MYDIR=$(dirname "$0")
