@@ -44,6 +44,9 @@ java \
 
 EXCODE=$?
 
-echo Java Finished. Quitting the Shell Too.
-echo
+# We assume stdout is for actual output, that might be pipelined to some other command, the rest (including logging)
+# goes to stderr.
+# 
+echo Java Finished. Quitting the Shell Too. >&2
+echo >&2
 exit $EXCODE
