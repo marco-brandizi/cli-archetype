@@ -16,7 +16,7 @@ cd target
 target="$1"
 
 if [ "$target" == "" ]; then
-  target=.
+	target=.
 fi;
 
 echo
