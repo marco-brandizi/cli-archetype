@@ -101,7 +101,7 @@ public class App
 	}
 
 	/**
-	 * This can be used when {@link #NO_EXIT_PROP} is "true" and you're invoking {@link #main(String...)} from 
+	 * This can be used when {@link #NO_EXIT_PROP} is "true" and you're invoking the main() method from 
 	 * a JUnit test. It tells you the OS exit code that the JVM would return upon exit.
 	 */
 	public static int getExitCode () {
