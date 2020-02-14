@@ -23,8 +23,7 @@ public class AppTest
 	{
 		// Prevents the CLI from invoking System.exit()
 		System.setProperty ( App.NO_EXIT_PROP, "true" );
-	}
-	
+	}	
 	
 	
 	@Test
