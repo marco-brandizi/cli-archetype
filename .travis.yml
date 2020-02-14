@@ -7,3 +7,7 @@ script: mvn deploy --settings settings.xml
 
 # See https://github.com/travis-ci/travis-ci/issues/6593, sometime Maven Central isn't accessible to non-sudo users
 sudo: true
+
+cache:
+  directories:
+    - $HOME/.m2
