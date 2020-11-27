@@ -28,6 +28,6 @@ mvn dependency:get \
 mvn archetype:generate \
 	-DgroupId=$groupId -DartifactId=$artifactId -Dversion=$version \
 	-DarchetypeGroupId=uk.ac.ebi.maven \
-	-DarchetypeArtifactId=knetminer-archetype \
+	-DarchetypeArtifactId=cli-archetype \
 	-DarchetypeVersion=3.0-SNAPSHOT \
 	-DinteractiveMode=false 
