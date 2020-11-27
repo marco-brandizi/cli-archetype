@@ -7,8 +7,9 @@ You can easily generate a new project (ie, Maven module) from a Bash-compatible 
 by typing something like:
 
 
-```bash  	
-curl -L TODO | sh -s sampleGroupId sample-cli 1.0-SNAPSHOT
+```bash
+create_cli_url=https://raw.githubusercontent.com/marco-brandizi/cli-archetype/master/create-project.sh  	
+curl -L "$create_cli_url" | sh -s sampleGroupId sample-cli 1.0-SNAPSHOT
 ```
 
 where, of course, the three parameters are the new artifact's coordinates.

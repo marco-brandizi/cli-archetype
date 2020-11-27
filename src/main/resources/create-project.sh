@@ -28,6 +28,6 @@ mvn dependency:get \
 mvn archetype:generate \
 	-DgroupId=$groupId -DartifactId=$artifactId -Dversion=$version \
 	-DarchetypeGroupId=${project.groupId} \
-	-DarchetypeArtifactId=knetminer-archetype \
+	-DarchetypeArtifactId=cli-archetype \
 	-DarchetypeVersion=${project.version} \
 	-DinteractiveMode=false 
