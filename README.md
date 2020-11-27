@@ -8,7 +8,7 @@ by typing something like:
 
 
 ```bash
-create_cli_url=https://raw.githubusercontent.com/marco-brandizi/cli-archetype/master/create-project.sh  	
+create_cli_url="https://raw.githubusercontent.com/marco-brandizi/cli-archetype/master/create-project.sh"  	
 curl -L "$create_cli_url" | sh -s sampleGroupId sample-cli 1.0-SNAPSHOT
 ```
 
