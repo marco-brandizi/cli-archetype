@@ -15,9 +15,7 @@ cd target
 
 target="$1"
 
-if [ "$target" == "" ]; then
-	target=.
-fi;
+[[ "$target" == "" ]]; && target=.
 
 echo
 echo 
