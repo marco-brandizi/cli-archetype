@@ -1,0 +1,32 @@
+Configuration:
+  name: test
+  status: info
+  
+  Properties:
+    Property:
+      name: pattern
+      value: "%d %p %C{1.} [%t] %m%n"
+  
+  ThresholdFilter:
+    level: trace
+  
+  Appenders:
+    Console:
+      name: STDOUT
+      PatternLayout:
+        Pattern: ${pattern}
+      Filters:
+        ThresholdFilter:
+          level: debug
+    File:
+      name: File
+      fileName: target/test.log
+      PatternLayout:
+        Pattern: ${pattern}
+
+  Loggers:
+    Root:
+      level: trace
+      AppenderRef:
+        - ref: STDOUT
+        - ref: File

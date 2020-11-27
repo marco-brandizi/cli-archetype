@@ -4,26 +4,21 @@
   
   <groupId>uk.ac.ebi.maven</groupId>
   <artifactId>cli-archetype</artifactId>
-  <version>2.0</version>
+  <version>3.0-SNAPSHOT</version>
   
   <name>Command Line Archetype</name>
-  <url>https://github.com/EBIBioSamples/cli-archetype</url>
+  <url>https://github.com/marco-brandizi/cli-archetype</url>
+  
   <description>
   	Allows you to define a project that produces the binary for a command-line based application, using the 
   	Assembly plug-in.
   	
   	See the project's README.md for details.
   </description>
-  
-	<parent>
-	  <groupId>uk.ac.ebi.fg.biosd</groupId>
-	  <artifactId>biosd_deploy</artifactId>
-	  <version>1.0-SNAPSHOT</version>
-	</parent>
-    
+      
 	<properties>
-		<maven.compiler.source>1.8</maven.compiler.source>
-		<maven.compiler.target>1.8</maven.compiler.target>
+		<maven.compiler.source>11</maven.compiler.source>
+		<maven.compiler.target>11</maven.compiler.target>
 	</properties>  
   
 	<repositories>
@@ -38,4 +33,42 @@
 	
 	</repositories>  
 
+
+	<distributionManagement>
+	
+    <snapshotRepository>
+    	<id>mbrandizi.jfrog.io</id>
+			<url>https://mbrandizi.jfrog.io/artifactory/maven</url>
+    </snapshotRepository>
+
+    <repository>
+    	<id>mbrandizi.jfrog.io</id>
+			<url>https://mbrandizi.jfrog.io/artifactory/maven</url>
+    </repository>	
+    
+	</distributionManagement>
+
+	<build>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<excludes>
+					<exclude>create-project.sh</exclude>
+				</excludes>
+			</resource>
+			<!-- 
+				This uses filtering to produce a version of the script that embeds the right
+				Maven project version
+			-->
+			<resource>
+				<directory>src/main/resources</directory>
+				<includes>
+					<include>create-project.sh</include>
+				</includes>
+				<targetPath>${project.basedir}</targetPath>
+				<filtering>true</filtering>
+			</resource>
+		</resources>	
+	</build>
+	
 </project>
