@@ -31,6 +31,6 @@ jobs:
       env:
         GITHUB_TOKEN: ${{github.token}}
         BRANDIZI_REPO_USER: ${{secrets.BRANDIZI_REPO_USER}}
-        BRANDIZI_REPO_USER: ${{secrets.BRANDIZI_REPO_PWD}}
+        BRANDIZI_REPO_PWD: ${{secrets.BRANDIZI_REPO_PWD}}
       run: mvn deploy -s maven-settings.xml  --no-transfer-progress --batch-mode
         
