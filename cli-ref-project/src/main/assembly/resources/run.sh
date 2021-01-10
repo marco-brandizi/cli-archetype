@@ -1,40 +1,47 @@
-#!/bin/sh
+#!/bin/bash
 
 # This is the Bash Launcher.
 # 
 
 # These are passed to the JVM. they're appended, so that you can predefine it from the shell
-OPTS="$OPTS -Xms2G -Xmx4G"
+[[ "$JAVA_TOOL_OPTIONS" =~ -Xm[s|x] ]] || JAVA_TOOL_OPTIONS="$JAVA_TOOL_OPTIONS -Xms2G -Xmx4G"
 
 # We always work with universal text encoding.
-OPTS="$OPTS -Dfile.encoding=UTF-8"
+[[ "$JAVA_TOOL_OPTIONS" =~ -Dfile.encoding ]] || JAVA_TOOL_OPTIONS="$JAVA_TOOL_OPTIONS -Dfile.encoding=UTF-8"
 
 # Monitoring with jvisualvm/jconsole (end-user doesn't usually need this)
-#OPTS="$OPTS 
+#JAVA_TOOL_OPTIONS="$JAVA_TOOL_OPTIONS 
 # -Dcom.sun.management.jmxremote.port=5010
 # -Dcom.sun.management.jmxremote.authenticate=false
 # -Dcom.sun.management.jmxremote.ssl=false"
        
 # Used for invoking a command in debug mode (end user doesn't usually need this)
-#OPTS="$OPTS -Xdebug -Xnoagent"
-#OPTS="$OPTS -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5005"
+#JAVA_TOOL_OPTIONS="$JAVA_TOOL_OPTIONS -Xdebug -Xnoagent"
+#JAVA_TOOL_OPTIONS="$JAVA_TOOL_OPTIONS -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5005"
+
+export JAVA_TOOL_OPTIONS
 
 # You shouldn't need to change the rest
 #
 ###
 
 cd "$(dirname $0)"
-MYDIR="$(pwd)"
+mydir="$(pwd)"
 
-# Additional .jar files or other CLASSPATH directories can be set with this.
-# (see http://kevinboone.net/classpath.html for details)  
-export CLASSPATH="$CLASSPATH:$MYDIR:$MYDIR/lib/*"
+# Additional .jar files or other CLASSPATH directories can be added as you need.
+#
+# $mydir is included due to files like log4j or Spring files often looked up in the CP.
+# Remove it if you don't need it and prefer a stricter CP
+# 
+# See https://javarevisited.blogspot.com/2012/10/5-ways-to-add-multiple-jar-to-classpath-java.html 
+# for details about the classpath in Java.
+# 
+export CLASSPATH="$CLASSPATH:$mydir:$mydir/lib/*"
 
 # See here for an explanation about ${1+"$@"} :
 # http://stackoverflow.com/questions/743454/space-in-java-command-line-arguments 
 
-java \
-	$OPTS uk.ac.ebi.example.App ${1+"$@"}
+java uk.ac.ebi.example.App ${1+"$@"}
 
 ex_code=$?
 
