@@ -3,3 +3,6 @@ target
 .classpath
 .project
 .DS_Store
+# These are downloaded by the CI
+/ci-build/build.sh
+/ci-build/install.sh
