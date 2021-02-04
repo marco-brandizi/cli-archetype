@@ -26,6 +26,10 @@ This generates a new basic CLI project, which includes:
   This includes a Bash launching script (Windows not available yet). The `zip-deploy.sh` script helps you to 
   deploy the distro zip to some target directory. 
      
+- You can read more about this project on [this blog post][40].
+     
+     
 [10]: https://maven.apache.org/archetype/maven-archetype-plugin/index.html
 [20]: https://picocli.info
 [30]: http://maven.apache.org/plugins/maven-assembly-plugin
+[40]: https://marcobrandizi.info/my-maven-archetype-for-java-command-line-projects/
