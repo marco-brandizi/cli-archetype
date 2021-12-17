@@ -1,4 +1,7 @@
-# 3.0-SNAPSHOT
+# 3.0.1-SNAPSHOT
+* Current snapshot
+
+# 3.0
 * Migrated to Java 11
 * Migrated to picocli
 * Migrated to my own GH account and to GH Actions
