@@ -27,6 +27,10 @@ This generates a new basic CLI project, which includes:
   deploy the distro zip to some target directory. 
      
 - You can read more about this project on [this blog post][40].
+
+**Note**: the `create-project.sh` script mentioned above creates a new project based on the latest (usually 
+snapshot) version of the archetype POM. Change the script manually if you want to use another version.
+
      
      
 [10]: https://maven.apache.org/archetype/maven-archetype-plugin/index.html
