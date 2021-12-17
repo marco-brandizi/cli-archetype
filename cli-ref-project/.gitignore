@@ -1,0 +1,10 @@
+/target
+# Eclipse 
+.settings
+.classpath
+.project
+# macos
+.DS_Store
+# For knetminer-common CI, these are downloaded by the CI
+/ci-build/build.sh
+/ci-build/install.sh
