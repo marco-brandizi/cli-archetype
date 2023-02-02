@@ -13,10 +13,11 @@
 	</scm>
 
 	<properties>
-		<log4j.version>2.16.0</log4j.version>
-		<jackson.version>2.13.2.2</jackson.version>
+		<log4j.version>2.19.0</log4j.version>
+		<jackson.version>2.14.2</jackson.version>
 		<maven.compiler.source>11</maven.compiler.source>
-		<maven.compiler.target>11</maven.compiler.target>
+		<maven.compiler.target>${maven.compiler.source}</maven.compiler.target>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
 	<dependencies>
@@ -63,14 +64,14 @@
 		<dependency>
 			<groupId>uk.ac.ebi</groupId>
 			<artifactId>jutils</artifactId>
-			<version>10.0</version>
+			<version>11.0.1</version>
 			<scope>test</scope>
 		</dependency>
 
 		<dependency>
 			<groupId>info.picocli</groupId>
 			<artifactId>picocli</artifactId>
-			<version>4.5.2</version>
+			<version>4.7.1</version>
 		</dependency>
 
 	</dependencies>
@@ -97,16 +98,8 @@
 		<plugins>
 
 			<plugin>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<configuration>
-					<source>11</source>
-					<target>11</target>
-					<encoding>utf-8</encoding>
-				</configuration>
-			</plugin>
-
-			<plugin>
 				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.0.0-M8</version>
 				<configuration>
 					<properties>
 						<property>
@@ -121,6 +114,7 @@
 			<!-- The package for line commands is built through this -->
 			<plugin>
 				<artifactId>maven-assembly-plugin</artifactId>
+				<version>3.4.2</version>
 				<configuration>
 					<archiverConfig>
 						<fileMode>0755</fileMode>

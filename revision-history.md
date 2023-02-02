@@ -1,5 +1,7 @@
 # 3.0.1-SNAPSHOT
-* Current snapshot
+
+# 3.0.1
+* Various dependency upgrades
 
 # 3.0
 * Migrated to Java 11
