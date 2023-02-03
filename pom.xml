@@ -4,7 +4,7 @@
   
   <groupId>uk.ac.ebi.maven</groupId>
   <artifactId>cli-archetype</artifactId>
-  <version>3.0.2</version>
+  <version>3.0.3-SNAPSHOT</version>
   
   <name>Command Line Archetype</name>
   <url>https://github.com/marco-brandizi/cli-archetype</url>
