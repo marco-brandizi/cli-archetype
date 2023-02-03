@@ -20,7 +20,7 @@ fi
 
 # First, download the archetype
 mvn dependency:get \
-  -Dartifact=uk.ac.ebi.maven:cli-archetype:3.0.1-SNAPSHOT\
+  -Dartifact=uk.ac.ebi.maven:cli-archetype:3.0.2\
   -DremoteRepositories=https://mbrandizi.jfrog.io/artifactory/maven
      
 # So that now we can use it from the local repo
@@ -29,5 +29,5 @@ mvn archetype:generate \
 	-DgroupId=$groupId -DartifactId=$artifactId -Dversion=$version \
 	-DarchetypeGroupId=uk.ac.ebi.maven \
 	-DarchetypeArtifactId=cli-archetype \
-	-DarchetypeVersion=3.0.1-SNAPSHOT \
+	-DarchetypeVersion=3.0.2 \
 	-DinteractiveMode=false 
