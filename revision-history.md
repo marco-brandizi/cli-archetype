@@ -2,10 +2,10 @@
 
 *This file was last revised on 2023-02-03.* **Please keep this note up to date.**
 
-# 3.0.2-SNAPSHOT
+# 3.0.3-SNAPSHOT
 * Current snapshot
 
-# 3.0.1
+# 3.0.2
 * Various dependency upgrades
 
 # 3.0
