@@ -2,7 +2,7 @@
 
 *This file was last revised on 2023-02-03.* **Please keep this note up to date.**
 
-# 3.0.1-SNAPSHOT
+# 3.0.2-SNAPSHOT
 * Current snapshot
 
 # 3.0.1
